@@ -15,7 +15,6 @@ const firebaseConfig = {
   measurementId: process.env.EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
-
 // const firebaseConfig = {
 //   apiKey: "AIzaSyAAB3kxIGQbYN3R0uKmdFHa8J_eP3AacxY",
 //   authDomain: "agrilanka-e49f9.firebaseapp.com",

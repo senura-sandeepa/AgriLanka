@@ -1,6 +1,6 @@
 // Copy this file to: src/screens/supermarket/SupermarketHomeScreen.js
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -15,6 +15,10 @@ import { Ionicons } from '@expo/vector-icons';
 import Header from '../../components/common/Header';
 import StatCard from '../../components/common/StatCard';
 import { COLORS } from '../../utils/colors';
+import axios from 'axios';
+import { API_BASE_URL } from '../../config/apiConfig';
+import { useAuth } from '../../context/AuthContext';
+
 
 // Mock data for available crops from farmers
 const availableCrops = [
@@ -499,6 +503,7 @@ const AddPurchaseGoalModal = ({ visible, onClose, onAdd }) => {
 
 // Main Supermarket Home Screen
 const SupermarketHomeScreen = () => {
+  const { userData } = useAuth();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCrop, setSelectedCrop] = useState(null);
   const [selectedFarmer, setSelectedFarmer] = useState(null);
@@ -507,6 +512,30 @@ const SupermarketHomeScreen = () => {
   const [showAddGoalModal, setShowAddGoalModal] = useState(false);
 
   const [purchaseGoals, setPurchaseGoals] = useState(initialPurchaseGoals);
+
+  useEffect(() => {
+    loadPurchaseGoals();
+  }, [userData?.id]);
+
+  const loadPurchaseGoals = async () => {
+    try {
+      const res = await axios.get(`${API_BASE_URL}/purchase-goals/${userData?.id}`);
+      if (res.data.length > 0) {
+        const mapped = res.data.map(g => ({
+          crop: g.crop_name,
+          targetQuantity: g.target_quantity,
+          purchasedQuantity: g.purchased_quantity || 0,
+          remainingQuantity: g.target_quantity - (g.purchased_quantity || 0),
+          unit: g.unit || 'kg',
+          targetPrice: g.target_price || 0,
+        }));
+        setPurchaseGoals(mapped);
+      }
+    } catch (e) {
+      console.error('Failed to load goals:', e);
+    }
+  };
+
   const [orderRequests, setOrderRequests] = useState(initialOrderRequests);
 
   const filteredCrops = availableCrops.filter(crop =>
@@ -542,8 +571,19 @@ const SupermarketHomeScreen = () => {
     );
   };
 
-  const handleAddGoal = (goalData) => {
-    setPurchaseGoals(prev => [...prev, goalData]);
+  const handleAddGoal = async (goalData) => {
+    try {
+      await axios.post(`${API_BASE_URL}/purchase-goals`, {
+        userId: userData?.id,
+        cropName: goalData.crop,
+        targetQuantity: goalData.targetQuantity,
+        targetPrice: goalData.targetPrice,
+        unit: goalData.unit || 'kg'
+      });
+      loadPurchaseGoals();
+    } catch (e) {
+      Alert.alert('Error', 'Failed to save goal');
+    }
   };
 
   return (

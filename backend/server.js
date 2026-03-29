@@ -197,6 +197,45 @@ app.put("/api/crop-listings/:listingId", async (req, res) => {
 
 app.use("/api", locationRouter);
 
+
+
+// Get purchase goals for supermarket
+app.get("/api/purchase-goals/:userId", async (req, res) => {
+    try {
+        const [rows] = await (await import('./services/database/config.js')).default.execute(
+            `SELECT pg.* FROM purchase_goals pg
+             JOIN supermarket_profiles sp ON pg.supermarket_id = sp.id
+             WHERE sp.user_id = ?`,
+            [req.params.userId]
+        );
+        res.json(rows);
+    } catch (e) {
+        console.error("Error fetching goals:", e);
+        res.status(500).json({ message: "Failed to fetch goals" });
+    }
+});
+
+// Add purchase goal
+app.post("/api/purchase-goals", async (req, res) => {
+    try {
+        const { userId, cropName, targetQuantity, targetPrice, unit } = req.body;
+        const [sp] = await (await import('./services/database/config.js')).default.execute(
+            `SELECT id FROM supermarket_profiles WHERE user_id = ?`, [userId]
+        );
+        if (!sp.length) return res.status(404).json({ message: "Supermarket not found" });
+        await (await import('./services/database/config.js')).default.execute(
+            `INSERT INTO purchase_goals (supermarket_id, crop_name, target_quantity, target_price, unit)
+             VALUES (?, ?, ?, ?, ?)`,
+            [sp[0].id, cropName, targetQuantity, targetPrice || null, unit || 'kg']
+        );
+        res.json({ message: "Goal added successfully" });
+    } catch (e) {
+        console.error("Error adding goal:", e);
+        res.status(500).json({ message: "Failed to add goal" });
+    }
+});
+
+
 // ---------------------- Start Server ----------------------
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
