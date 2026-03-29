@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="DataSourcePerFileMappings">
-    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/ad8f182c-130a-49d6-a67a-3a49341375e4/console.sql" value="ad8f182c-130a-49d6-a67a-3a49341375e4" />
-    <file url="file://$PROJECT_DIR$/backend/services/UserService.js" value="ad8f182c-130a-49d6-a67a-3a49341375e4" />
-    <file url="file://$PROJECT_DIR$/backend/services/signupService.js" value="ad8f182c-130a-49d6-a67a-3a49341375e4" />
-  </component>
-</project>
