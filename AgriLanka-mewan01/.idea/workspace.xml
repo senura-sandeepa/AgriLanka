@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b20761ff-a28b-47d5-9f30-5d8d902ec189" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/services/Croplistingservice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/CropListingApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ad8f182c-130a-49d6-a67a-3a49341375e4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ad8f182c-130a-49d6-a67a-3a49341375e4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/FarmerProfileService.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/FarmerProfileService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/signupService.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/signupService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/AppNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/AppNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/auth/SignUpScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/auth/SignUpScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/farmer/FarmerHomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/farmer/FarmerHomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/farmer/FarmerProfileScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/farmer/FarmerProfileScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/supermarket/SupermarketOrdersScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/supermarket/SupermarketOrdersScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/FarmerProfileApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/FarmerProfileApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/cropsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/cropsApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/signupScreenApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/signupScreenApi.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_F:/projects/agrilanka" value="38kCfyQE7MUxYu955a6waEjkrDf" />
+    </persistenceIdMap>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="89" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="38kCfyQE7MUxYu955a6waEjkrDf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;JavaScript Debug.localhost:3000.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.FarmerHomeScreen.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.FarmerProfileScreen.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;mewan01&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\MYITEM.LK\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\projects\agrilanka\backend\services" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="localhost:3000" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.localhost:3000" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.29346.242" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b20761ff-a28b-47d5-9f30-5d8d902ec189" name="Changes" comment="" />
+      <created>1769334291685</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769334291685</updated>
+      <workItem from="1769334293902" duration="9908000" />
+      <workItem from="1769680513233" duration="2153000" />
+      <workItem from="1769701467183" duration="5610000" />
+      <workItem from="1769759043708" duration="480000" />
+      <workItem from="1769760119649" duration="2728000" />
+      <workItem from="1769861408460" duration="16812000" />
+      <workItem from="1770017327258" duration="29775000" />
+      <workItem from="1770125805896" duration="41100000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
