@@ -125,3 +125,16 @@ create table supermarket_profiles
         foreign key (user_id) references users (id)
 );
 
+create table purchase_goals
+(
+    id                 bigint auto_increment primary key,
+    supermarket_id     bigint not null,
+    crop_name          varchar(255) not null,
+    target_quantity    decimal(10,2) not null,
+    purchased_quantity decimal(10,2) default 0,
+    unit               varchar(20) default 'kg',
+    target_price       decimal(10,3) null,
+    created_at         datetime default CURRENT_TIMESTAMP,
+    constraint purchase_goals_supermarket_profiles_id_fk
+        foreign key (supermarket_id) references supermarket_profiles(id)
+);

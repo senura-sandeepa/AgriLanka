@@ -66,7 +66,7 @@ export const AuthProvider = ({ children }) => {
         id: accountId,
         userType: type,
         userData: data,
-        credentials: credentials,
+        credentials: { email: credentials.email }, // never save password
       };
 
       const existingAccount = savedAccounts.find(

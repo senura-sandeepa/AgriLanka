@@ -42,13 +42,14 @@ export const createUserWithProfile = async ({
                 [userId, name, ownerName, location, addressNo]
             );
 
-        }  else if (userType === "supermarket") {
-        await conn.execute(
-            `INSERT INTO supermarket_profiles
-             (user_id, supermarket_name, contact_person, location_id, created_at, updated_at)
-         VALUES (?, ?, ?, ?, NOW(), NOW())`,
-            [userId, name, name, location]
-        );
+        } else if (userType === "supermarket") {
+            // Supermarket: no ownerName or addressNo
+            await conn.execute(
+                `INSERT INTO supermarket_profiles
+                     (user_id, supermarket_name, location_id, created_at, updated_at)
+                 VALUES (?, ?, ?, NOW(), NOW())`,
+                [userId, name, location]
+            );
 
         } else {
             throw new Error("Invalid userType");
